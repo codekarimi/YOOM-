@@ -6,7 +6,7 @@ import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@cl
 
 const navbar = () => {
   return (
-    <nav className="flex-between fixed z-50 w-full-bg-dark-1 px-6 py-4 lg:px-10 ">
+    <nav className="flex-between fixed z-50 w-full-bg-dark-1 px-6 py-4 lg:px-10 gap-5 ">
       <Link href={"/"} className="flex items-centre gap-1">
         <Image
           src="/icons/logo.svg"
@@ -22,7 +22,7 @@ const navbar = () => {
       <div className="flex-between gap-5">
 
             <SignedIn>
-                    <UserButton />
+                    <UserButton afterSignOutUrl="/sign-in" />
             </SignedIn>
             <SignedOut>
               <SignInButton />
