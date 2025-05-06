@@ -11,8 +11,9 @@ const Home = () => {
   month: 'long',
   day: 'numeric'
   });
-  const time = new Date().toLocaleTimeString([],{
-       hour: '2-digit',
+  const time = new Date().toLocaleTimeString('en-US',{
+    timeZone: 'Africa/Nairobi',
+    hour: '2-digit',
     minute: '2-digit'
   });
 
