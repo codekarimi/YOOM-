@@ -64,7 +64,7 @@ const personal = () => {
       <div className="flex w-full flex-col gap-8 xl:max-w-[1000px]">
         <Table
           title="Meeting Room"
-          description={`${user?.username}'s Meeting Room`}
+          description={`${user?.firstName}'s Meeting Room`}
         />
         <Table title="Meeting ID" description={meetingId!} />
         <Table title="Invite Link" description={meetingLink} />
@@ -74,12 +74,15 @@ const personal = () => {
           Start Meeting
         </Button>
 
-        <Button className="bg-dark-3" onClick={() =>{
-          navigator.clipboard.writeText(meetingLink);
-          toast({
-            title: "Copied",
-          });
-        }}>
+        <Button
+          className="bg-dark-3"
+          onClick={() => {
+            navigator.clipboard.writeText(meetingLink);
+            toast({
+              title: "Copied",
+            });
+          }}
+        >
           Copy Link Invitation
         </Button>
       </div>
